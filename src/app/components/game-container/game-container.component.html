@@ -1,0 +1,27 @@
+<div class="text-center text-xl mt-10">
+  <span class="text-xl">
+    {{ question }}
+  </span>
+  <br />
+  <br />
+  <span> {{ questionIndex + 1 }} / {{ questionMaxIndex }} </span>
+</div>
+
+<div
+  class="m-auto w-fit mt-22"
+  (selectstart)="onSelectStart($event)"
+  (mousedown)="onMouseDown($event)"
+>
+  <div class="border-2 my-8"></div>
+
+  <app-word-container
+    class="text-center"
+    [word]="this.word"
+    [maxWordLength]="maxWordLength"
+  ></app-word-container>
+  <br />
+  <div class="border-2 my-8"></div>
+  <app-alphabet-container
+    (letterToSend)="getWord($event)"
+  ></app-alphabet-container>
+</div>

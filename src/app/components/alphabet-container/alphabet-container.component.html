@@ -1,0 +1,28 @@
+<div class="text-center w-96 text-lg">
+  <span
+    *ngFor="let letter of upperCaseAlphabet; index as i"
+    class="bg-gray-400 text-white text-center size-12 m-2 inline-block cursor-pointer pt-3 rounded"
+    (click)="sendLetter(letter)"
+  >
+    {{ letter }}
+  </span>
+  <br />
+  <span
+    class="bg-gray-400 text-white text-center size-12 w-max m-2 inline-block cursor-pointer pt-3 rounded px-16"
+    (click)="sendLetter('␣')"
+  >
+    ␣
+  </span>
+  <span
+    class="bg-gray-400 text-white text-center size-12 w-max m-2 inline-block cursor-pointer pt-3 rounded px-5"
+    (click)="sendLetter('⌫')"
+  >
+    ⌫
+  </span>
+  <span
+    class="bg-gray-400 text-white text-center size-12 w-max m-2 inline-block cursor-pointer pt-3 rounded px-5"
+    (click)="sendLetter('✓')"
+  >
+    ✓
+  </span>
+</div>
